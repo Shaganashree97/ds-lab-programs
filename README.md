@@ -1,2 +1,3 @@
-# DataStructures-Lab-Programs
-My Data Structure Lab Programs
+# Data Structures Lab Programs
+
+My Data Structures (DS) Lab Programs
