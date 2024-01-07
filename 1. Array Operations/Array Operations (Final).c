@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int size = 5, count = 0, element;
-int arr[5];
+int size = 5, count = 0, element;  // size - array size, count - to track the no of elements in array, element - to get element from the user
+int arr[5];   // Declare array
 
-void insertAtFront()
+void insertAtFront()   // Insert at Front
 {
     if (count == size)
     {
@@ -19,15 +19,15 @@ void insertAtFront()
         {
             if (arr[i] != 0)
             {
-                arr[i + 1] = arr[i];
+                arr[i + 1] = arr[i];   // Moves elements 1 position ahead from its index
             }
         }
-        arr[0] = element;
-    count++;
+        arr[0] = element;   // Insert at 1st position
+    count++;   // count increments after insert
     }
-}
+}   // End of Insert at Front
 
-void insertAtBack()
+void insertAtBack()   // Insert at Back
 {
     if (count == size)
     {
@@ -37,12 +37,12 @@ void insertAtBack()
     {
         printf("Enter element to Insert: ");
         scanf("%d", &element);
-        arr[count] = element;
-    count++;
+        arr[count] = element;   // Insert at last position
+    count++;   // count increments after insert
     }
-}
+}   // End of Insert at Back
 
-void deleteAtFront()
+void deleteAtFront()   // Delete at Front
 {
     if (count == 0)
     {
@@ -54,14 +54,14 @@ void deleteAtFront()
         {
             if (arr[i] != 0)
             {
-                arr[i] = arr[i + 1];
+                arr[i] = arr[i + 1];   // Moves 1 position before to its index
             }
         }
-        count--;
+        count--;   // count decrements after delete
     }
-}
+}   // End of Delete at Front
 
-void deleteAtBack()
+void deleteAtBack()   // Delete at Back
 {
     if (count == 0)
     {
@@ -70,11 +70,11 @@ void deleteAtBack()
     else
     {
         arr[count - 1] = 0;
-        count--;
+        count--;   // count decrements after delete
     }
-}
+}   // End of Delete at Back
 
-void display()
+void display()   // Display elements in array
 {
     if(count == 0)
     {
@@ -85,18 +85,18 @@ void display()
         for(int i=0; i<size; i++)
         {
             if (arr[i] != 0)
-                printf("arr[%d] = %d\n", i, arr[i]);
+                printf("arr[%d] = %d\n", i, arr[i]);   // Display all the elements
         }
     }
-}
+}   // End of display
 
 int main()
 {
-    int choice;
+    int choice;   // Declare the choice to perform the operation
     printf("Array Operations\n");
     while(1)
     {
-        printf("\n1. Insert at Front\n");
+        printf("\n1. Insert at Front\n");   // Menu list for operation
         printf("2. Insert at Back\n");
         printf("3. Delete at Front\n");
         printf("4. Delete at Back\n");
@@ -122,12 +122,12 @@ int main()
                 display();
                 break;
             case 6:
-                exit(0);
+                exit(0);   // To exit
             default:
                 printf("Invalid Choice");
-        }
-    }
-}
+        }   // End of Switch
+    }   // End of while
+}   // End of main
 
 /*
 Output:
